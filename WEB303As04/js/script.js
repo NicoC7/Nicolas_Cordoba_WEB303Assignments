@@ -1,55 +1,64 @@
 /*
     Assignment #4
-    {Your name here}
+    {Nicolas Moreno Cordoba}
 */
 
 $(function () {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            displayLocation(position.coords.latitude, position.coords.longitude);
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            const accuracy = position.coords.accuracy;
+
+            displayLocation(latitude, longitude, accuracy);
 
             const storedLocation = localStorage.getItem("storedLocation");
             if (storedLocation) {
                 const [storedLat, storedLng] = storedLocation.split(",");
                 const distance = calcDistanceBetweenPoints(
-                    position.coords.latitude,
-                    position.coords.longitude,
+                    latitude,
+                    longitude,
                     parseFloat(storedLat),
                     parseFloat(storedLng)
                 );
+                displayStoredLocation(storedLat, storedLng);
                 displayWelcomeBack(distance);
             } else {
                 displayWelcome();
             }
 
-            localStorage.setItem("storedLocation", `${position.coords.latitude},${position.coords.longitude}`);
+            localStorage.setItem("storedLocation", `${latitude},${longitude}`);
+        }, function (error) {
+            displayErrorMessage("Error getting location: " + error.message);
         });
     } else {
         displayErrorMessage("Geolocation is not available. Please enable it to use this application.");
     }
 
-    function displayLocation(latitude, longitude) {
-        const locationDiv = document.getElementById("locationhere");
-        locationDiv.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+    function createMessage(messageText) {
+        const messageDiv = document.createElement("h1");
+        messageDiv.textContent = messageText;
+        document.getElementById("content").appendChild(messageDiv);
+    }
+
+    function displayLocation(latitude, longitude, accuracy) {
+        createMessage(`Latitude: ${latitude}, Longitude: ${longitude}, Accuracy: ${accuracy.toFixed(2)} meters`);
+    }
+
+    function displayStoredLocation(latitude, longitude) {
+        createMessage(`Stored Location: Latitude: ${latitude}, Longitude: ${longitude}`);
     }
 
     function displayWelcomeBack(distance) {
-        const welcomeMessage = document.getElementById("welcomeMessage");
-        welcomeMessage.textContent = "Welcome back to the page! You traveled a distance of " + distance.toFixed(2) + " meters since your last visit.";
+        createMessage(`Welcome back to the page! You traveled a distance of ${(distance / 1000).toFixed(2)} km since your last visit.`);
     }
 
     function displayWelcome() {
-        const welcomeMessage = document.getElementById("welcomeMessage");
-        welcomeMessage.textContent = "Welcome to the page for the first time!";
+        createMessage("Welcome to the page for the first time!");
     }
 
     function displayErrorMessage(message) {
-        const errorMessage = document.getElementById("welcomeMessage");
-        errorMessage.textContent = message;
-    }
-
-    function calcDistanceBetweenPoints(lat1, lon1, lat2, lon2) {
-        return calculatedDistance;
+        createMessage(message);
     }
 });
 
