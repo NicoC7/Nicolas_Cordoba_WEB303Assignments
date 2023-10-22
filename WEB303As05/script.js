@@ -18,6 +18,16 @@ class ContentItem {
         }
     }
 
+    toString() {
+        return `
+        <div calss = "content-item-wrapper" id = "content-item-${this.id}">
+            <h2>${this.name}</h2>
+            <p>${this.description}</p>
+            <div>${this.categoryGenre}</div>
+        </div>
+        `;       
+    }
+
 }
 
 $(document).ready(function () {
