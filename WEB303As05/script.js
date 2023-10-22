@@ -55,6 +55,9 @@ $(document).ready(function () {
 
     });
 
+    const newThemeTitle = "My Favorites BodyBuilders";
+    $('#nomas').text(newThemeTitle);
+
 });
 
 
