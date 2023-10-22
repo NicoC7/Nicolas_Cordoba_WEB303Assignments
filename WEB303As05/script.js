@@ -30,6 +30,14 @@ class ContentItem {
 
 }
 
+const BodyBuilders = [
+    new ContentItem(0, "Ronnie Coleman", "American retired professional bodybuilder. The winner of the Mr. Olympia title for eight consecutive.", "Open Division"),
+    new ContentItem(1, "Tom Platz", " American retired professional bodybuilder. He was known for his leg development, which in his prime measured over 30 inches.", "212 Olympia"),
+    new ContentItem(2, "CBum", "Canadian IFBB professional bodybuilder. Bumstead is the reigning Mr. Olympia Classic Physique winner four times consecutive.", "Classic Physique"),
+    new ContentItem(3, "Rubiel Mosquera", "Colombian IFBB profesional bodybuilder known as NeckZilla for his Fifty-two cetimeters circumference neck", "Classic Physique"),
+    new ContentItem(4, "Ramon Dino", "Brazilian IFBB profesional bodybuilder known for his huge forearms, his forearms make look small his biceps", "Classic Physique")
+    ]
+
 $(document).ready(function () {
     // your code here
 
