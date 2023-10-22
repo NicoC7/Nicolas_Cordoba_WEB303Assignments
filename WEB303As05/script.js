@@ -20,7 +20,7 @@ class ContentItem {
 
     toString() {
         return `
-        <div calss = "content-item-wrapper" id = "content-item-${this.id}">
+        <div calss="content-item-wrapper" id="content-item-${this.id}">
             <h2>${this.name}</h2>
             <p>${this.description}</p>
             <div>${this.categoryGenre}</div>
@@ -31,15 +31,29 @@ class ContentItem {
 }
 
 const BodyBuilders = [
-    new ContentItem(0, "Ronnie Coleman", "American retired professional bodybuilder. The winner of the Mr. Olympia title for eight consecutive.", "Open Division"),
-    new ContentItem(1, "Tom Platz", " American retired professional bodybuilder. He was known for his leg development, which in his prime measured over 30 inches.", "212 Olympia"),
-    new ContentItem(2, "CBum", "Canadian IFBB professional bodybuilder. Bumstead is the reigning Mr. Olympia Classic Physique winner four times consecutive.", "Classic Physique"),
-    new ContentItem(3, "Rubiel Mosquera", "Colombian IFBB profesional bodybuilder known as NeckZilla for his Fifty-two cetimeters circumference neck", "Classic Physique"),
-    new ContentItem(4, "Ramon Dino", "Brazilian IFBB profesional bodybuilder known for his huge forearms, his forearms make look small his biceps", "Classic Physique")
+    new ContentItem(0, "Ronnie Coleman", "American retired professional bodybuilder. The winner of the Mr. Olympia title for eight consecutive.", "Division: Open"),
+    new ContentItem(1, "Tom Platz", " American retired professional bodybuilder. He was known for his leg development, which in his prime measured over 30 inches.", "Division: 212 Olympia"),
+    new ContentItem(2, "CBum", "Canadian IFBB professional bodybuilder. Bumstead is the reigning Mr. Olympia Classic Physique winner four times consecutive.", "Division: Classic Physique"),
+    new ContentItem(3, "Rubiel Mosquera", "Colombian IFBB profesional bodybuilder known as NeckZilla for his Fifty-two cetimeters circumference neck", "Division: Classic Physique"),
+    new ContentItem(4, "Ramon Dino", "Brazilian IFBB profesional bodybuilder known for his huge forearms, his forearms make look small his biceps", "Division: Classic Physique")
     ]
 
 $(document).ready(function () {
     // your code here
+    const $contentList = $('#content-item-list');
+
+    BodyBuilders.forEach(element => {
+        const $contentWrapper = $(element.toString()); 
+        $contentWrapper.css({
+            border: '1px solid red',
+            width : '89%',
+            padding : '1.5rem',
+            margin : '1.5rem auto'
+        }); 
+
+        $contentList.append($contentWrapper);
+
+    });
 
 });
 
