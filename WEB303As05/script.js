@@ -58,6 +58,23 @@ $(document).ready(function () {
     const newThemeTitle = "My Favorites BodyBuilders";
     $('#content>h2').text(newThemeTitle);
 
+    const updateSucc = $("#updateSuccessful");
+    const updateUnsucc = $("#updateUnsuccessful");
+
+    updateSucc.on('click',function(){
+    const itemToUpdt = BodyBuilders[0];
+    itemToUpdt.updateContentItem(0,"Mike Mentzer", "American IFBB profesional bodybuilder known for using cocaine as pre-workout and the havy duty training method", "Division: Classic Physique");
+
+    const $updatedItem = $(itemToUpdt.toString());
+    $updatedItem.css({
+        border: '1px solid red',
+        width : '89%',
+        padding : '1.5rem',
+        margin : '1.5rem auto'
+    }); 
+    $(`#content-item-${itemToUpdt.id}`).replaceWith($updatedItem);
+    });
+
 });
 
 
