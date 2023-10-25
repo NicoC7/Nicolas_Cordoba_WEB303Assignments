@@ -72,8 +72,19 @@ $(document).ready(function () {
         padding : '1.5rem',
         margin : '1.5rem auto'
     }); 
+
+    const succMssg = $("<span class='success-message'>Succesfully Updated</span>");
+    
+    const $oldItem = $(`#content-item-${itemToUpdt.id}`);
+    $oldItem.replaceWith($updatedItem);
+    $updatedItem.append(succMssg.css({
+        background: "green",
+        color: 'white',
+        padding: "0.5rem",
+    }));
+
     $(`#content-item-${itemToUpdt.id}`).replaceWith($updatedItem);
-    });
+    }); 
 
 });
 
