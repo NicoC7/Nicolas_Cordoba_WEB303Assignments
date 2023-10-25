@@ -58,12 +58,14 @@ $(document).ready(function () {
     const newThemeTitle = "My Favorites BodyBuilders";
     $('#content>h2').text(newThemeTitle);
 
+// Bonus mark
+
     const updateSucc = $("#updateSuccessful");
     const updateUnsucc = $("#updateUnsuccessful");
-
+//Update Succesfully
     updateSucc.on('click',function(){
     const itemToUpdt = BodyBuilders[0];
-    itemToUpdt.updateContentItem(0,"Mike Mentzer", "American IFBB profesional bodybuilder known for using cocaine as pre-workout and the havy duty training method", "Division: Classic Physique");
+    itemToUpdt.updateContentItem(itemToUpdt.id,"Mike Mentzer", "American IFBB profesional bodybuilder known for using cocaine as pre-workout and the havy duty training method", "Division: Classic Physique");
 
     const $updatedItem = $(itemToUpdt.toString());
     $updatedItem.css({
@@ -77,15 +79,43 @@ $(document).ready(function () {
     
     const $oldItem = $(`#content-item-${itemToUpdt.id}`);
     $oldItem.replaceWith($updatedItem);
-    $updatedItem.append(succMssg.css({
+    $updatedItem.prepend(succMssg.css({
         background: "green",
         color: 'white',
-        padding: "0.5rem",
+        padding: "0.5rem"
     }));
 
-    $(`#content-item-${itemToUpdt.id}`).replaceWith($updatedItem);
-    }); 
+    succMssg.fadeIn();
+    setTimeout(function () {
+        succMssg.fadeOut();
+    }, 2000);
 
+    $(`#content-item-${itemToUpdt.id}`).replaceWith($updatedItem);
+    });
+
+//Update Unsuccesfully
+
+    updateUnsucc.on('click',function(){
+        const itemToUpdt = BodyBuilders[1];
+        itemToUpdt.updateContentItem(itemToUpdt.id, null, null, null);
+
+        const unSuccMssg = $("<span class='unsuccess-message'>Unsuccesfully Updated</span>");
+
+        const $header = $('header');
+        $header.prepend(unSuccMssg.css({
+            background: "red",
+            color: 'white',
+            padding: "0.5rem 0",
+            margin: "15rem"
+        }));
+
+        unSuccMssg.fadeIn();
+        setTimeout(function () {
+            unSuccMssg.fadeOut(function () {
+                unSuccMssg.remove();
+            });
+        }, 2000);
+        });
 });
 
 
