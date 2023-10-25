@@ -24,8 +24,7 @@ class ContentItem {
             <h2>${this.name}</h2>
             <p>${this.description}</p>
             <div>${this.categoryGenre}</div>
-        </div>
-        `;       
+             `;       
     }
 
 }
@@ -56,7 +55,7 @@ $(document).ready(function () {
     });
 
     const newThemeTitle = "My Favorites BodyBuilders";
-    $('#nomas').text(newThemeTitle);
+    $('#content>h2').text(newThemeTitle);
 
 });
 
