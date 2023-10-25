@@ -24,7 +24,8 @@ class ContentItem {
             <h2>${this.name}</h2>
             <p>${this.description}</p>
             <div>${this.categoryGenre}</div>
-             `;       
+        </div>
+        `;       
     }
 
 }
