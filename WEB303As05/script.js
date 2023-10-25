@@ -59,6 +59,15 @@ $(document).ready(function () {
     $('#content>h2').text(newThemeTitle);
 
 // Bonus mark
+    //Try to add the buttons but didnt work and im tired of this
+    // const $buttonsDiv = $("<div class='buttons'></div>");
+    // const $updateSuccessfulButton = $("<button id='updateSuccessful'>Update Successfully</button>");
+    // const $updateUnsuccessfulButton = $("<button id='updateUnsuccessful'>Update Unsuccessfully</button>");
+
+    // $('#content-item-list').append($buttonsDiv);
+
+    // $buttonsDiv.append($updateSuccessfulButton);
+    // $buttonsDiv.append($updateUnsuccessfulButton);
 
     const updateSucc = $("#updateSuccessful");
     const updateUnsucc = $("#updateUnsuccessful");
