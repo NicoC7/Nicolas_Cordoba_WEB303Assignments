@@ -36,7 +36,7 @@ const BodyBuilders = [
     new ContentItem(2, "CBum", "Canadian IFBB professional bodybuilder. Bumstead is the reigning Mr. Olympia Classic Physique winner four times consecutive.", "Division: Classic Physique"),
     new ContentItem(3, "Rubiel Mosquera", "Colombian IFBB profesional bodybuilder known as NeckZilla for his Fifty-two cetimeters circumference neck", "Division: Classic Physique"),
     new ContentItem(4, "Ramon Dino", "Brazilian IFBB profesional bodybuilder known for his huge forearms, his forearms make look small his biceps", "Division: Classic Physique")
-    ]
+]
 
 $(document).ready(function () {
     // your code here
@@ -56,7 +56,7 @@ $(document).ready(function () {
     });
 
     const newThemeTitle = "My Favorites BodyBuilders";
-    $('#nomas').text(newThemeTitle);
+    $('#content>h2').text(newThemeTitle);
 
 });
 
