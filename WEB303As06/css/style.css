@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;700&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #FFE600;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Kulim Park', sans-serif;
+}
+
+
+.accordion {
+    border: 1px solid #009E49;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+.accordion h3 {
+    background-color:#009E49;
+    padding: 2%;
+    cursor: pointer;
+    border-top: 1px solid #009E49;
+    border-left: 1px solid #009E49;
+    border-right: 1px solid #009E49;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.accordion .panel {
+    display: none;
+    padding: 2%;
+    background-color: #009E49;
+    border: 1px solid #009E49;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+
+.tabs {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+.tab-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tab-nav li {
+    flex: 1;
+}
+
+.tab-nav li a {
+    display: block;
+    padding: 2%;
+    text-align: center;
+    background-color: #00A7E1;
+    border-right: 1px solid #00A7E1;
+    text-decoration: none;
+    color: #333;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab-nav li:last-child a {
+    border-right: none;
+}
+
+.tab-content {
+    display: none;
+    padding: 2%;
+    background-color: #00A7E1;
+    border: 1px solid #00A7E1;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+footer {
+    background-color: #00A7E1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 3px solid #F9D101;
+  }
+  
+
+  footer a {
+    color: #F9D101;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .welcome {
+    background-color: #ffc000;
+    text-align: center;
+    padding: 1rem;
+    font-size: 24px;
+    color: #ff0000;
+}
+
+.welcome h1 {
+    margin: 0;
+}
+
+.welcome h1:first-child {
+    font-size: 32px;
+}
+  
