@@ -1,0 +1,112 @@
+a #photo-viewer{
+    display: block;
+    max-height: 450px;
+    max-width: 800px;
+    overflow:hidden;
+}
+
+#photo-viewer img{
+    max-width:100%;
+    max-height: 100%;
+}
+
+#share {
+    display: flex;
+    justify-content: center;
+}
+
+#thumbnails img{
+    height: 30%;
+    width: 30%;
+    min-width: 80px;
+    min-height: 45px;
+    border: 1px solid blue;
+    border-radius: 1rem;
+}
+
+#thumbnails {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.thumb {
+    display: flex;
+    justify-content: center;
+}
+
+a.active{
+    opacity: 0.3;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+body {
+    display: block;
+    justify-content: center;
+}
+
+/* .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.modal-content {
+    display: block;
+    justify-content: center;
+}
+
+.modal-close {
+    background-color: red;
+    padding: 1rem;
+    
+}
+
+body {
+    display: inline-block;
+    justify-content: center;
+}
+
+html {
+    display: flex;
+    justify-content: center ;
+}
+
+footer {
+    width: 97%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: grey;
+    padding: 1rem;
+    font-size: large;
+}
+
+footer strong {
+    margin-left: 1rem;
+    display: inline;
+}
+
+footer a {
+    color:black;
+}
+
