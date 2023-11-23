@@ -1,0 +1,53 @@
+{
+    "characters": [
+      {
+        "firstName": "Dominic",
+        "lastName": "Toretto",
+        "gender": "Male",
+        "role": "Street Racer",
+        "specialAbility": "Fearless Driving"
+      },
+      {
+        "firstName": "Brian",
+        "lastName": "O'Conner",
+        "gender": "Male",
+        "role": "Undercover Cop",
+        "specialAbility": "Expert Driver"
+      },
+      {
+        "firstName": "Letty",
+        "lastName": "Ortiz",
+        "gender": "Female",
+        "role": "Mechanic",
+        "specialAbility": "Combat Skills"
+      },
+      {
+        "firstName": "Roman",
+        "lastName": "Pearce",
+        "gender": "Male",
+        "role": "Comedian",
+        "specialAbility": "Fast Talker"
+      },
+      {
+        "firstName": "Mia",
+        "lastName": "Toretto",
+        "gender": "Female",
+        "role": "Street Racer",
+        "specialAbility": "Strategic Planner"
+      },
+      {
+        "firstName": "Han",
+        "lastName": "Seoul-Oh",
+        "gender": "Male",
+        "role": "Drifter",
+        "specialAbility": "Precision Driving"
+      },
+      {
+        "firstName": "Tej",
+        "lastName": "Parker",
+        "gender": "Male",
+        "role": "Tech Expert",
+        "specialAbility": "Hacker"
+      }
+    ]
+  }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Moreno Cordoba - Fast & Furious</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+</head>
+<body>
+    <h1>Nicolas Moreno Cordoba - Fast & Furious</h1>
+
+    <div id="search-container">
+        <label for="searchInput">Search by First Name:</label>
+        <input type="text" id="searchInput" oninput="searchCharacter(this.value)">
+    </div>
+
+    <table id="charactersTable" border="1">
+        <!-- Table headers -->
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Role</th>
+                <th>Special Ability</th>
+            </tr>
+        </thead>
+        <!-- Table body will be populated with data through jQuery -->
+        <tbody></tbody>
+    </table>
+
+    <div id="filters">
+        <button onclick="filterByLastName('A-M')">A - M (<span id="countAM">0</span>)</button>
+        <button onclick="filterByLastName('N-Z')">N - Z (<span id="countNZ">0</span>)</button>
+    </div>
+</body>
+</html>
